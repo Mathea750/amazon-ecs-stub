@@ -4,6 +4,7 @@
 	<groupId>de.malkusch.amazon.product-advertising-api</groupId>
 	<artifactId>amazon-ecs-jax</artifactId>
 	<version>1.0.0</version>
+	<packaging>jar</packaging>
 	<build>
 		<plugins>
 			<plugin>
