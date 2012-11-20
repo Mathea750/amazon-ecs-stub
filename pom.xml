@@ -5,6 +5,27 @@
 	<artifactId>amazon-ecs-jax</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
+	<name>Amazon's Product Advertising API Client Stubs</name>
+	<description>Amazon's Product Advertising API Client Stubs</description>
+	<url>https://github.com/malkusch/amazon-ecs-stub</url>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm>
+		<connection>scm:git:git://github.com/malkusch/amazon-ecs-stub.git</connection>
+		<url>https://github.com/malkusch/amazon-ecs-stub</url>
+	</scm>
+	<developers>
+		<developer>
+			<id>malkusch</id>
+			<name>Markus Malkusch</name>
+			<email>markus@malkusch.de</email>
+		</developer>
+	</developers>
 	<build>
 		<plugins>
 			<plugin>
