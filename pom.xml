@@ -19,6 +19,12 @@
 		<connection>scm:git:git://github.com/malkusch/amazon-ecs-stub.git</connection>
 		<url>https://github.com/malkusch/amazon-ecs-stub</url>
 	</scm>
+	<distributionManagement>
+		<repository>
+			<id>ssh-repository</id>
+			<url>scpexe://malkusch.de/var/www/malkusch.de/mvn/</url>
+		</repository>
+	</distributionManagement>
 	<developers>
 		<developer>
 			<id>malkusch</id>
@@ -27,6 +33,13 @@
 		</developer>
 	</developers>
 	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh-external</artifactId>
+				<version>1.0-beta-6</version>
+			</extension>
+		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -42,6 +55,17 @@
 							</wsdlUrls>
 							<packageName>com.ECS.client.jax</packageName>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
