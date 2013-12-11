@@ -1,48 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.malkusch.amazon.product-advertising-api</groupId>
-	<artifactId>amazon-ecs-jax</artifactId>
-	<version>1.0.0</version>
+	<artifactId>amazon-ecs-stub</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>Amazon's Product Advertising API Client Stubs</name>
-	<description>Amazon's Product Advertising API Client Stubs</description>
-	<url>https://github.com/malkusch/amazon-ecs-stub</url>
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+	
+	<parent>
+		<groupId>de.malkusch.parent</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>1.1-SNAPSHOT</version>
+	</parent>
+	
+	<name>amazon-ecs-stub</name>
+	<description>
+		Amazon's Product Advertising API Client Stubs for
+		http://webservices.amazon.com/AWSECommerceService/2011-08-01
+	</description>
+	
+	<url>https://github.com/malkusch/${project.artifactId}</url>
 	<scm>
-		<connection>scm:git:git://github.com/malkusch/amazon-ecs-stub.git</connection>
-		<url>https://github.com/malkusch/amazon-ecs-stub</url>
+		<connection>scm:git:git://github.com/malkusch/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git@github.com:malkusch/${project.artifactId}.git</developerConnection>
+		<url>https://github.com/malkusch/${project.artifactId}</url>
 	</scm>
-	<distributionManagement>
-		<repository>
-			<id>ssh-repository</id>
-			<url>scpexe://malkusch.de/var/www/malkusch.de/mvn/</url>
-		</repository>
-	</distributionManagement>
-	<developers>
-		<developer>
-			<id>malkusch</id>
-			<name>Markus Malkusch</name>
-			<email>markus@malkusch.de</email>
-		</developer>
-	</developers>
+	
 	<build>
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh-external</artifactId>
-				<version>1.0-beta-6</version>
-			</extension>
-		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -59,18 +42,6 @@
 							</wsdlUrls>
 							<packageName>com.ECS.client.jax</packageName>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>jar</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>
